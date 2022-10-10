@@ -39,24 +39,23 @@ class: center, middle, inverse, title-slide
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4[
 Merge conflicts
 ]
---
+
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4.mt2[
 
 Branching
 ]
---
+
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4.mt2[
 Pull requests 
 ]
---
+
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4.mt2[
 Fork 
 ]
 
 --
-.bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4.mt2[
-Using the Terminal/Command Line
-]
+
+Github Desktop (local) &amp; Github (web/cloud/remote)
 
 
 ---
@@ -70,7 +69,7 @@ class: inverse, center, middle
 
 Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
 
-.bg-washed-blue.b--blue.ba.bw2.br3.shadow-5.ph4[
+.bg-washed-blue.b--blue.ba.bw2.br3.shadow-5.flex.justify-center[
 ![Tree trunk and square](images/repo-branch-01.png)
 ]
 ---
@@ -89,9 +88,113 @@ Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-te
 ]
 
 .footnote[
-Drawings from Jeff Olson's Medium [article](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
+Images from Jeff Olson's Medium [article](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
 ]
 ---
+
+## Merge Conflicts
+
+When do you encounter merge conflicts?
+
+--
+- When two people have changed the same lines in a file.
+
+--
+
+
+- Chances are higher for merge conflicts when 1) I'm changing the same lines in a file as someone else AND 2) forgetting to `git pull` (click on the `fetch origin` button) before changing a file and pushing.
+
+--
+
+Resolving conflicts
+
+
+- Github embeds "conflict dividers" in the file. The `=======` line is the "center" of the conflict. 
+
+---
+
+## Branches
+
+.panelset.sideways[
+.panel[.panel-name[Image]
+.bg-washed-yellow.b--yellow.ba.bw2.br3.shadow-5.ph4.flex.justify-around[
+
+.div[
+![Tree with squirrel and bike](images/repo-branch-04.png)
+]
+
+.div[
+![House with path](images/repo-branch-05.png)
+]
+]
+ 
+]
+
+.panel[.panel-name[Github Desktop]
+
+- Click on `Branch` &gt; `New Branch`
+
+]
+
+.panel[.panel-name[Command Line]
+
+- `git checkout -b name-of-new-branch`
+
+]
+]
+
+
+---
+
+## Pull Requests
+
+- Notifying collaborators that you want to merge branches
+
+- Creating a PR doesn't merge, just notifies and analyzes for conflicts 
+
+
+
+
+---
+
+## Fork
+
+&gt; A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+- When the project diverges from the original intent
+
+- A stepping-stone for your new project
+
+- [Metropolitan Council (MN) forks PSRC's Travel Survey App](https://github.com/Metropolitan-Council/travel-study-stories)
+
+![Met Council Github page](images/fork-02.png)
+
+---
+
+## Undo-ing
+
+.panelset.sideways[
+.panel[.panel-name[Github Desktop]
+
+- After committing, click `Undo` 
+
+]
+
+.panel[.panel-name[Command Line]
+
+- `Git reset HEAD dummy_file_01.R` (unstaging a file before a commit)
+
+- `git checkout 36b761 dummy_file_01.R` (reverting a file to previous commit)
+
+- `git checkout 36b761` (revert the whole repo to previous commit)
+
+]
+]
+
+
+
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
