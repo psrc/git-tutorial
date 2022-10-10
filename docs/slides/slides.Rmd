@@ -9,6 +9,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: 16:9
 ---
 
 ```{r xaringan-extra, echo=FALSE, warning=FALSE}
