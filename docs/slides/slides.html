@@ -5,13 +5,12 @@
     <meta charset="utf-8" />
     <meta name="date" content="2022-11-07" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -28,6 +27,7 @@ class: center, middle, inverse, title-slide
 ]
 
 ---
+
 
 
 
@@ -55,7 +55,10 @@ Fork
 
 --
 
-Github Desktop (local) &amp; Github (web/cloud/remote)
+.bg-near-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2[
+Github Desktop (local 💻) &amp; Github (web/remote ☁️) 
+]
+
 
 
 ---
@@ -65,16 +68,116 @@ class: inverse, center, middle
 
 ---
 
+
+
 ## Merge Conflicts
 
-Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
+When do you encounter merge conflicts?
+
+--
+
+**.green[When things diverge and two people have changed the same lines in a file.]**
+
+--
+.pull-left.center[
+😎 Developer A
+]
+
+.pull-right.center[
+🤓 Developer B
+]
+--
+.pull-left.center[
+- Scripting (lines 1-10) 💻
+]
+
+.pull-right.center[
+- Scripting (lines 1-10) 💻
+]
+--
+.pull-left.center[
+
+- Scripting 💻 / Coffee break ☕                
+
+]
+
+.pull-right.center[
+
+- Pushes to Github ⬆️
+
+]
+--
+.pull-left.center[
+
+- Pushes to Github ⬆️   
+(Forgot to pull)                
+
+]
+
+.pull-right.center[
+
+
+]
+
+
+Developer A is **.green[one commit behind]** Github. Pushing when not in-sync with the latest commits on Github creates the divergence. 
+
+--
+
+.pull-left.center[
+
+- receives ⚠️. Need to resolve conflict.             
+
+]
+
+.pull-right.center[
+
+
+]
+
+---
+
+## Resolving Conflicts
+
+
+Github embeds **.green[conflict dividers]** in the file. The `=======` line is the "center" of the conflict. 
+
+---
+
+## Avoiding Conflicts
+
+.panelset.sideways[
+
+.panel[.panel-name[Github Desktop]
+
+Notice the blue buttons that indicate when there's new commits to the repo that require pulling
+
+- Before working on your project, pull!
+
+  - Click on `Fetch origin` button or 
+  - Click the blue button in the middle of the screen 
+]
+
+.panel[.panel-name[Command Line]
+
+
+
+]
+
+]
+
+---
+
+## Avoiding Conflicts
+
+Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
 
 .bg-washed-blue.b--blue.ba.bw2.br3.shadow-5.flex.justify-center[
 ![Tree trunk and square](images/repo-branch-01.png)
 ]
 ---
 
-## Merge Conflicts
+## Avoiding Conflicts
 
 .bg-washed-green.b--green.ba.bw2.br3.shadow-5.ph4.mt5.flex.justify-around[
 
@@ -87,35 +190,17 @@ Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-te
 ]
 ]
 
-.footnote[
-Images from Jeff Olson's Medium [article](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
-]
----
-
-## Merge Conflicts
-
-When do you encounter merge conflicts?
-
---
-- When two people have changed the same lines in a file.
-
---
-
-
-- Chances are higher for merge conflicts when 1) I'm changing the same lines in a file as someone else AND 2) forgetting to `git pull` (click on the `fetch origin` button) before changing a file and pushing.
-
---
-
-Resolving conflicts
-
-
-- Github embeds "conflict dividers" in the file. The `=======` line is the "center" of the conflict. 
-
 ---
 
 ## Branches
 
 .panelset.sideways[
+.panel[.panel-name[Benefits]
+
+- concurrent work on different parts of a project
+
+]
+
 .panel[.panel-name[Image]
 .bg-washed-yellow.b--yellow.ba.bw2.br3.shadow-5.ph4.flex.justify-around[
 
@@ -139,6 +224,16 @@ Resolving conflicts
 .panel[.panel-name[Command Line]
 
 - `git checkout -b name-of-new-branch`
+  - Creates a new branch and moves you onto the branch.
+  
+- `git branch name-of-new-branch`
+  - Creates a new branch only.
+  
+- `git branch`
+  - Lists all branches in the repo. `*` indicates which branch you're on.
+  
+- `git checkout name-of-existing-branch`
+  - Moves you onto branch.
 
 ]
 ]
@@ -159,6 +254,8 @@ Resolving conflicts
 
 ## Fork
 
+.panelset.sideways[
+.panel[.panel-name[About]
 &gt; A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
 - When the project diverges from the original intent
@@ -168,7 +265,32 @@ Resolving conflicts
 - [Metropolitan Council (MN) forks PSRC's Travel Survey App](https://github.com/Metropolitan-Council/travel-study-stories)
 
 ![Met Council Github page](images/fork-02.png)
+]
 
+.panel[.panel-name[Clone or Fork?]
+
+Both copy a repository, but the purpose is different
+
+.pull-left[
+### Clone
+
+- Creates a linked copy
+
+- Contribute by pushing and pulling
+
+]
+
+.pull-right[
+### Fork
+
+- Creates an independent copy
+
+- Contribute via PR
+
+]
+]
+
+]
 ---
 
 ## Undo-ing

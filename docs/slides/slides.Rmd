@@ -4,6 +4,7 @@ subtitle: "Part Two"
 date: "November 7, 2022"
 output:
   xaringan::moon_reader:
+    css: xaringan-themer.css
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -14,6 +15,7 @@ output:
 
 ```{r xaringan-extra, echo=FALSE, warning=FALSE}
 library(xaringanExtra)
+library(emo)
 use_tile_view()
 use_panelset()
 use_tachyons()
@@ -29,6 +31,15 @@ options(htmltools.dir.version = FALSE)
 # 5. Using the Terminal/Command Line
 ```
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Poppins"),
+  text_font_google   = google_font("Poppins", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
 # Topics
 
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4[
@@ -50,7 +61,10 @@ Fork
 
 --
 
-Github Desktop (local) & Github (web/cloud/remote)
+.bg-near-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2[
+Github Desktop (local `r ji('computer')`) & Github (web/remote `r ji('cloud')`) 
+]
+
 
 
 ---
@@ -60,16 +74,116 @@ class: inverse, center, middle
 
 ---
 
+
+
 ## Merge Conflicts
 
-Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
+When do you encounter merge conflicts?
+
+--
+
+**.green[When things diverge and two people have changed the same lines in a file.]**
+
+--
+.pull-left.center[
+`r ji('smiling face with sunglasses')` Developer A
+]
+
+.pull-right.center[
+`r ji('nerd')` Developer B
+]
+--
+.pull-left.center[
+- Scripting (lines 1-10) `r ji('computer')`
+]
+
+.pull-right.center[
+- Scripting (lines 1-10) `r ji('computer')`
+]
+--
+.pull-left.center[
+
+- Scripting `r ji('computer')` / Coffee break `r ji('coffee')`                
+
+]
+
+.pull-right.center[
+
+- Pushes to Github `r ji('up arrow')`
+
+]
+--
+.pull-left.center[
+
+- Pushes to Github `r ji('up arrow')`   
+(Forgot to pull)                
+
+]
+
+.pull-right.center[
+
+
+]
+
+
+Developer A is **.green[one commit behind]** Github. Pushing when not in-sync with the latest commits on Github creates the divergence. 
+
+--
+
+.pull-left.center[
+
+- receives `r ji('warning')`. Need to resolve conflict.             
+
+]
+
+.pull-right.center[
+
+
+]
+
+---
+
+## Resolving Conflicts
+
+
+Github embeds **.green[conflict dividers]** in the file. The `=======` line is the "center" of the conflict. 
+
+---
+
+## Avoiding Conflicts
+
+.panelset.sideways[
+
+.panel[.panel-name[Github Desktop]
+
+Notice the message indicating when there's new commits to the repo that require pulling
+
+- Before working on your project, pull!
+
+  - Click on `Fetch origin` button or 
+  - Click the blue button in the middle of the screen 
+]
+
+.panel[.panel-name[Command Line]
+
+
+
+]
+
+]
+
+---
+
+## Avoiding Conflicts
+
+Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
 
 .bg-washed-blue.b--blue.ba.bw2.br3.shadow-5.flex.justify-center[
 ![Tree trunk and square](images/repo-branch-01.png)
 ]
 ---
 
-## Merge Conflicts
+## Avoiding Conflicts
 
 .bg-washed-green.b--green.ba.bw2.br3.shadow-5.ph4.mt5.flex.justify-around[
 
@@ -82,35 +196,17 @@ Image by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-te
 ]
 ]
 
-.footnote[
-Images from Jeff Olson's Medium [article](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
-]
----
-
-## Merge Conflicts
-
-When do you encounter merge conflicts?
-
---
-- When two people have changed the same lines in a file.
-
---
-
-
-- Chances are higher for merge conflicts when 1) I'm changing the same lines in a file as someone else AND 2) forgetting to `git pull` (click on the `fetch origin` button) before changing a file and pushing.
-
---
-
-Resolving conflicts
-
-
-- Github embeds "conflict dividers" in the file. The `=======` line is the "center" of the conflict. 
-
 ---
 
 ## Branches
 
 .panelset.sideways[
+.panel[.panel-name[Benefits]
+
+- concurrent work on different parts of a project
+
+]
+
 .panel[.panel-name[Image]
 .bg-washed-yellow.b--yellow.ba.bw2.br3.shadow-5.ph4.flex.justify-around[
 
@@ -134,6 +230,16 @@ Resolving conflicts
 .panel[.panel-name[Command Line]
 
 - `git checkout -b name-of-new-branch`
+  - Creates a new branch and moves you onto the branch.
+  
+- `git branch name-of-new-branch`
+  - Creates a new branch only.
+  
+- `git branch`
+  - Lists all branches in the repo. `*` indicates which branch you're on.
+  
+- `git checkout name-of-existing-branch`
+  - Moves you onto branch.
 
 ]
 ]
@@ -154,6 +260,8 @@ Resolving conflicts
 
 ## Fork
 
+.panelset.sideways[
+.panel[.panel-name[About]
 > A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
 - When the project diverges from the original intent
@@ -163,7 +271,32 @@ Resolving conflicts
 - [Metropolitan Council (MN) forks PSRC's Travel Survey App](https://github.com/Metropolitan-Council/travel-study-stories)
 
 ![Met Council Github page](images/fork-02.png)
+]
 
+.panel[.panel-name[Clone or Fork?]
+
+Both copy a repository, but the purpose is different
+
+.pull-left[
+### Clone
+
+- Creates a linked copy
+
+- Contribute by pushing and pulling
+
+]
+
+.pull-right[
+### Fork
+
+- Creates an independent copy
+
+- Contribute via PR
+
+]
+]
+
+]
 ---
 
 ## Undo-ing
