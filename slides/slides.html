@@ -50,7 +50,7 @@ Pull requests
 ]
 
 .bg-near-white.b--gray.ba.bw2.br3.shadow-5.ph4.mt2[
-Fork 
+Forking 
 ]
 
 --
@@ -103,14 +103,14 @@ When do you encounter merge conflicts?
 
 .pull-right.center[
 
-- Pushes to Github ⬆️
+- Commits &amp; pushes to Github ⬆️
 
 ]
 --
 .pull-left.center[
 
-- Pushes to Github ⬆️   
-(Forgot to pull)                
+- Commits &amp; tries to push to Github ⬆️   
+(Forgot to pull, pulls after the fact)                
 
 ]
 
@@ -119,10 +119,9 @@ When do you encounter merge conflicts?
 
 ]
 
-
-Developer A is **.green[one commit behind]** Github. Pushing when not in-sync with the latest commits on Github creates the divergence. 
-
 --
+
+
 
 .pull-left.center[
 
@@ -135,12 +134,22 @@ Developer A is **.green[one commit behind]** Github. Pushing when not in-sync wi
 
 ]
 
+--
+
+Committing/Pushing when not in-sync with the latest commits on Github creates the divergence. 
+
+
+
 ---
 
 ## Resolving Conflicts
 
 
 Github embeds **.green[conflict dividers]** in the file. The `=======` line is the "center" of the conflict. 
+
+.mt5.center[
+![](images/mc-resolve.png)
+]
 
 ---
 
@@ -150,7 +159,7 @@ Github embeds **.green[conflict dividers]** in the file. The `=======` line is t
 
 .panel[.panel-name[Github Desktop]
 
-Notice the blue buttons that indicate when there's new commits to the repo that require pulling
+Notice the message indicating when there's new commits to the repo that require pulling
 
 - Before working on your project, pull!
 
@@ -160,7 +169,19 @@ Notice the blue buttons that indicate when there's new commits to the repo that 
 
 .panel[.panel-name[Command Line]
 
+If you're ready to add, commit, and push, but realized someone else has just pushed to the repo...
 
+1. `git stash save` (removes the changes and sets them aside)
+
+2. `git pull origin branch-name`
+
+3. `git stash pop` (throw your changes back into the code)
+
+4. `git add .`
+
+5. `git commit -m 'your log message here'`
+
+6. `git push origin branch-name`
 
 ]
 
@@ -199,6 +220,8 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 
 - concurrent work on different parts of a project
 
+- &gt; Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+
 ]
 
 .panel[.panel-name[Image]
@@ -218,6 +241,10 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 .panel[.panel-name[Github Desktop]
 
 - Click on `Branch` &gt; `New Branch`
+
+.bg-near-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2[
+The new branch will be a copy of the branch that you were currently on.
+]
 
 ]
 
