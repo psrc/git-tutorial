@@ -144,7 +144,10 @@ When do you encounter merge conflicts?
 
 Committing/Pushing when not in-sync with the latest commits on Github creates the divergence. 
 
+---
 
+class: inverse, center, middle
+# How to get out of a conflict
 
 ---
 
@@ -169,7 +172,7 @@ Notice the message indicating when there's new commits to the repo that require 
 
 - Before working on your project, pull!
 
-  - Click on `Fetch origin` button or 
+  - Click on the grey `Fetch origin`/`Pull origin` button or 
   - Click the blue button in the middle of the screen 
 ]
 
@@ -177,7 +180,7 @@ Notice the message indicating when there's new commits to the repo that require 
 
 If you're ready to add, commit, and push, but realized someone else has just pushed to the repo...
 
-1. `git stash save` (removes the changes and sets them aside)
+1. `git stash save` (removes your changes and sets them aside)
 
 2. `git pull origin branch-name`
 
@@ -192,6 +195,11 @@ If you're ready to add, commit, and push, but realized someone else has just pus
 ]
 
 ]
+
+---
+
+class: inverse, center, middle
+# Branching 
 
 ---
 
@@ -224,9 +232,15 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 .panelset.sideways[
 .panel[.panel-name[Benefits]
 
-- concurrent work on different parts of a project
+- Default branch: `main` (formerly k.a. `master`)
+
+- Concurrent work on different parts of a project
 
 - > Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+
+- Can merge content of a branch with main or another branch within the repo
+
+- Branches can be deleted
 
 ]
 
@@ -249,7 +263,7 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 - Click on `Branch` > `New Branch`
 
 .bg-near-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2[
-The new branch will be a copy of the branch that you were currently on.
+The new branch will be a copy of the branch that you were currently on
 ]
 
 ]

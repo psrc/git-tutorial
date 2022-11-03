@@ -1,5 +1,5 @@
 ---
-title: "Git & Github Tutorial"
+title: "Git & Github Sessions"
 description: |
   Part Two
 site: distill::distill_website
@@ -7,6 +7,7 @@ site: distill::distill_website
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(emo)
 ```
 
 ```{r share-again, echo=FALSE}
@@ -16,3 +17,12 @@ xaringanExtra::use_share_again()
 ```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
 xaringanExtra::embed_xaringan(url = "slides/slides.html", ratio = "16:9")
 ```
+
+<aside>
+Shortcut Keys
+
+- `f`: full-screen
+- `Esc`: exit full-screen
+- `o`: tile view
+- `r ji('left_arrow')` `r ji('right_arrow')`: advance slide
+</aside>

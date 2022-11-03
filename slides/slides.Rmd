@@ -74,7 +74,13 @@ class: inverse, center, middle
 
 ---
 
+## Merge Conflicts
 
+<img src = "https://upload.wikimedia.org/wikipedia/commons/9/97/Paragraph-based_prototype_%E2%80%93_rough_visualization_of_the_functionality.png" />
+
+Image by [Johanna Strodt (Wikipedia: Edit Conflict)](https://commons.wikimedia.org/wiki/File:Paragraph-based_prototype_%E2%80%93_rough_visualization_of_the_functionality.png)
+
+---
 
 ## Merge Conflicts
 
@@ -116,7 +122,7 @@ When do you encounter merge conflicts?
 .pull-left.center[
 
 - Commits & tries to push to Github `r ji('up arrow')`   
-(Forgot to pull, pulls after the fact)                
+(Forgot to pull and/or pulls after the fact)                
 
 ]
 
@@ -128,7 +134,9 @@ When do you encounter merge conflicts?
 --
 
 
+Committing/Pushing when not in-sync with the latest commits on Github creates the divergence. 
 
+--
 .pull-left.center[
 
 - receives `r ji('warning')`. Need to resolve conflict.             
@@ -140,11 +148,12 @@ When do you encounter merge conflicts?
 
 ]
 
---
-
-Committing/Pushing when not in-sync with the latest commits on Github creates the divergence. 
 
 
+---
+
+class: inverse, center, middle
+# How to Resolve a Conflict
 
 ---
 
@@ -156,6 +165,16 @@ Github embeds **.green[conflict dividers]** in the file. The `=======` line is t
 .mt5.center[
 ![](images/mc-resolve.png)
 ]
+
+Keep the version you want (or create something new), but remember to remove the conflict divider and chevrons/labels before committing and pushing.
+
+---
+
+## Avoiding Conflicts
+
+```{r, fig.align='center', out.width = "400px", echo=FALSE}
+knitr::include_graphics("images/mc-tweet.png")
+```
 
 ---
 
@@ -169,15 +188,17 @@ Notice the message indicating when there's new commits to the repo that require 
 
 - Before working on your project, pull!
 
-  - Click on `Fetch origin` button or 
+  - Click on the grey `Fetch origin`/`Pull origin` button or 
   - Click the blue button in the middle of the screen 
+  
+- [Git Stash and Pop via Github Desktop](https://stackoverflow.com/questions/53789443/how-do-i-git-stash-in-github-desktop) but involves branches
 ]
 
 .panel[.panel-name[Command Line]
 
 If you're ready to add, commit, and push, but realized someone else has just pushed to the repo...
 
-1. `git stash save` (removes the changes and sets them aside)
+1. `git stash save` (removes your changes and sets them aside)
 
 2. `git pull origin branch-name`
 
@@ -195,18 +216,17 @@ If you're ready to add, commit, and push, but realized someone else has just pus
 
 ---
 
-## Avoiding Conflicts
+class: inverse, center, middle
+# Branching 
 
-Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
-
-.bg-washed-blue.b--blue.ba.bw2.br3.shadow-5.flex.justify-center[
-![Tree trunk and square](images/repo-branch-01.png)
-]
 ---
 
 ## Avoiding Conflicts
 
-.bg-washed-green.b--green.ba.bw2.br3.shadow-5.ph4.mt5.flex.justify-around[
+Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
+
+
+.bg-washed-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2.flex.justify-around[
 
 .div[
 ![Tree trunk and square filled with fence and swing](images/repo-branch-02.png)
@@ -224,9 +244,13 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 .panelset.sideways[
 .panel[.panel-name[Benefits]
 
-- concurrent work on different parts of a project
+- Concurrent work on different parts of a project
 
 - > Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+
+- Default branch: `main` (formerly k.a. `master`), can merge content of a branch with main or another branch within the repo
+
+- Branches can be deleted
 
 ]
 
@@ -241,6 +265,7 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 ![House with path](images/repo-branch-05.png)
 ]
 ]
+
  
 ]
 
@@ -249,7 +274,7 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 - Click on `Branch` > `New Branch`
 
 .bg-near-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2[
-The new branch will be a copy of the branch that you were currently on.
+The new branch will be a copy of the branch that you were currently on
 ]
 
 ]

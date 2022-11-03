@@ -6,15 +6,15 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-10-31T21:33:37-07:00"
+      "last_modified": "2022-11-02T09:57:57-07:00"
     },
     {
       "path": "index.html",
       "title": "Git & Github Tutorial",
       "description": "Part Two\n",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-10-31T21:33:38-07:00"
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nShortcut Keys\r\nf: full-screen\r\nEsc: exit full-screen\r\no: tile view\r\n⬅️ ➡️: advance slide\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-11-02T09:57:59-07:00"
     }
   ],
   "collections": []
