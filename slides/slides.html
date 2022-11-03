@@ -164,13 +164,13 @@ Keep the version you want (or create something new), but remember to remove the 
 
 ---
 
-## Avoiding Conflicts
+## Minimizing Conflicts
 
 &lt;img src="images/mc-tweet.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Avoiding Conflicts
+## Minimizing Conflicts
 
 .panelset.sideways[
 
@@ -183,7 +183,6 @@ Notice the message indicating when there's new commits to the repo that require 
   - Click on the grey `Fetch origin`/`Pull origin` button or 
   - Click the blue button in the middle of the screen 
   
-- [Git Stash and Pop via Github Desktop](https://stackoverflow.com/questions/53789443/how-do-i-git-stash-in-github-desktop) but involves branches
 ]
 
 .panel[.panel-name[Command Line]
@@ -213,41 +212,13 @@ class: inverse, center, middle
 
 ---
 
-## Avoiding Conflicts
-
-Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)
-
-
-.bg-washed-green.b--green.ba.bw2.br3.shadow-5.ph4.mt2.flex.justify-around[
-
-.div[
-![Tree trunk and square filled with fence and swing](images/repo-branch-02.png)
-]
-
-.div[
-![Tree trunk and square filled with grass and flowers](images/repo-branch-03.png)
-]
-]
-
----
-
 ## Branches
 
-.panelset.sideways[
-.panel[.panel-name[Benefits]
+**.green[A version of the repo]** allows concurrent work on different parts of a project
 
-- Concurrent work on different parts of a project
+.f6[Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/teaching-git-github-to-teenagers-branching-and-merging-6416a365458a)]
 
-- &gt; Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
-
-- Default branch: `main` (formerly k.a. `master`), can merge content of a branch with main or another branch within the repo
-
-- Branches can be deleted
-
-]
-
-.panel[.panel-name[Image]
-.bg-washed-yellow.b--yellow.ba.bw2.br3.shadow-5.ph4.flex.justify-around[
+.flex.justify-around[
 
 .div[
 ![Tree with squirrel and bike](images/repo-branch-04.png)
@@ -258,8 +229,29 @@ Image and other related images by [Jeff Olson](https://medium.com/upperlinecode/
 ]
 ]
 
- 
-]
+
+
+
+---
+
+## Benefits of Branches
+
+- &gt; Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+
+- Default branch: `main` (formerly k.a. `master`), can merge content of a branch with `main` or another branch within the repo
+
+- Can have multiple branches
+
+- Branches can be deleted
+
+
+
+---
+
+## Branches
+
+.panelset.sideways[
+
 
 .panel[.panel-name[Github Desktop]
 
@@ -288,6 +280,10 @@ The new branch will be a copy of the branch that you were currently on
 ]
 ]
 
+---
+
+class: inverse, center, middle
+# Pull Requests 
 
 ---
 
@@ -297,6 +293,11 @@ The new branch will be a copy of the branch that you were currently on
 
 - Creating a PR doesn't merge, just notifies and analyzes for conflicts 
 
+![](images/pr-open.png)
+---
+
+
+![](images/pr-created.png)
 
 
 
