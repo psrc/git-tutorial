@@ -14,6 +14,11 @@ library(emo)
 xaringanExtra::use_share_again()
 ```
 
+Pre-work: 
+
+- Clone the repository [`git-class-sandbox`](https://github.com/psrc/git-class-sandbox)
+- Sign into your Github account
+
 ```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
 xaringanExtra::embed_xaringan(url = "slides/slides.html", ratio = "16:9")
 ```
