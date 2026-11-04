@@ -1,10 +1,13 @@
 ---
-title: "About this site"
-description: |
-  Some additional details about the website
+title: "About"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+This site was created using the distill package. Interested in the code? Here's the [Github repository](https://github.com/psrc/git-tutorial){target="_blank"}, check it out!
+
+In this site, you'll find resources used in previous and current git & Github sessions at PSRC. 
+
+For feedback or ideas for future learning sessions, please let anyone on the Data Science Team know!

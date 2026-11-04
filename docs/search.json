@@ -2,19 +2,35 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "About",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-11-07T12:43:43-08:00"
+      "contents": "\r\nThis site was created using the distill package. Interested in the code? Here’s the Github repository, check it out!\r\nIn this site, you’ll find resources used in previous and current git & Github sessions at PSRC.\r\nFor feedback or ideas for future learning sessions, please let anyone on the Data Science Team know!\r\n\r\n\r\n\r\n",
+      "last_modified": "2026-11-03T16:24:09-08:00"
+    },
+    {
+      "path": "git-bash.html",
+      "title": "Git Bash",
+      "description": "All things relating to the command line interface (CLI)\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nGetting started\r\nGit Bash comes with the git install. If you don’t have git installed, download it from the git site.\r\nSet-up\r\nBy default it will assume the email linked to your laptop. If the email associated with your Github account is not your PSRC email, use the commands below to change it.\r\nIn the git bash terminal type the following but using your own Github username and email linked to Github:\r\ngit config --global user.name \"myusername\"\r\ngit config --global user.email myemail@gmail.com\r\nTo verify that the changes have been made:\r\ngit config --list\r\nFor video instructions on setting up your email and username in git, click on this short Youtube tutorial.\r\nWhile pushing for the first time, the terminal will ask for username and password. If you have previously generated a personal token, the personal token should be used in lieu of your password.\r\n\r\n\r\n\r\n",
+      "last_modified": "2026-11-03T16:24:12-08:00"
     },
     {
       "path": "index.html",
       "title": "Git & Github Sessions",
-      "description": "Part Two\n",
+      "description": "2026-27 Mini sessions on Branching, Pull Requests & Merges, and Undoing things\n",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\nPre-work:\r\nClone the repository git-class-sandbox\r\nSign into your Github account\r\n\r\n\r\n\r\n\r\n\r\nShortcut Keys\r\nf: full-screen\r\nEsc: exit full-screen\r\no: tile view\r\n⬅️ ➡️: advance slide\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-11-07T12:43:44-08:00"
+      "contents": "\r\n\r\n\r\n\r\nAgenda\r\nSession #1 (Nov 10, 2026): Branching\r\nWhy branch?\r\nHow to branch and know which branch you’re on by exploring different tools (Github Desktop, RStudio, Git Bash) to see what options you have\r\nSession #2 (TBD): Pull Requests & Merges\r\nWhy and how to create a pull request (PR)\r\nHow to merge branches\r\nSession #3 (TBD): Undoing\r\nHow to undo at each stage of the process:\r\nUnstaged\r\nStaged\r\nCommitted but not yet pushed to Github\r\nCommitted and already pushed Github\r\n\r\nRestore a single-file from an old commit (but not the whole repo!)\r\nPre-work\r\nCreate a Github account\r\nDownload Github Desktop, RStudio, R, git (Git Bash comes with your git install)\r\nClone the repository git-together\r\nSign into your Github account\r\n\r\n\r\n\r\n",
+      "last_modified": "2026-11-03T16:24:15-08:00"
+    },
+    {
+      "path": "past-sessions.html",
+      "title": "Past Sessions",
+      "description": "Find slides and other information from past sessions\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\nShortcut Keys\r\nf: full-screen\r\nEsc: exit full-screen\r\no: tile view\r\n⬅️ ➡️: advance slide\r\n\r\n\r\n\r\n",
+      "last_modified": "2026-11-03T16:24:17-08:00"
     }
   ],
   "collections": []

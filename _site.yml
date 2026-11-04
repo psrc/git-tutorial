@@ -8,6 +8,15 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Topics"
+      menu:
+        - text: "Git Bash"
+          href: git-bash.html
+    - text: "Resources"
+      menu:
+        - text: "Past Sessions"
+          href: past-sessions.html
     - text: "About"
       href: about.html
+    
 output: distill::distill_article

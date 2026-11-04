@@ -1,0 +1,28 @@
+---
+title: "Past Sessions"
+description: |
+  Find slides and other information from past sessions
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
+xaringanExtra::embed_xaringan(url = "slides/slides.html", ratio = "16:9")
+```
+
+<aside>
+Shortcut Keys
+
+- `f`: full-screen
+- `Esc`: exit full-screen
+- `o`: tile view
+- `r ji('left_arrow')` `r ji('right_arrow')`: advance slide
+</aside>
+
+
+
+
+
