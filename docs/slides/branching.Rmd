@@ -1,0 +1,139 @@
+---
+title: "Branching"
+date: "November 10, 2026"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
+library(xaringanExtra)
+library(emo)
+use_tile_view()
+use_panelset()
+use_tachyons()
+
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Poppins"),
+  text_font_google   = google_font("Poppins", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  text_font_size = "2rem"
+)
+```
+# General Workflow
+
+.tc.v-mid.mt5[
+.bw2.br-pill.shadow-5.ph4.f2[Clone/Create Repository]
+
+.bg-light-yellow.b--gold.ba.bw2.br-pill.shadow-5.ph4.f2.mt5[Branch]
+
+.bw2.br-pill.shadow-5.ph4.f2.mt5[Pull Request]
+
+.bw2.br-pill.shadow-5.ph4.f2.mt5[Merge]
+]
+
+---
+
+# Goals
+
+1. Encourage Use
+
+2. Different ways to create and find out which branch you're on (Github Desktop, RStudio, Git Bash)
+
+
+---
+
+
+# What are branches?
+
+.f3[
+- A line of development that helps you work in isolation. 
+
+- Main (Master) is a branch in itself.
+
+- Making a copy of an existing branch that you can work on and take into your own direction to ultimately fold back into the main line of development.
+
+- A branch is something where you can stage files, commit and push to Github and view it online. Can also delete.
+]
+
+---
+
+# At PSRC, branching not required…
+
+.mt5[
+- Few projects where multiple people are all collaborating closely editing the same files
+
+- Usually we’re writing/updating different files
+
+- No overwriting or overlapping of work
+]
+
+---
+class: inverse, middle, center
+
+# So Why?
+
+---
+
+## Why branch?
+
+**A safe place to experiment**
+
+- Can delete branch locally or from Github
+
+- Push commits that’s not polished or bug free
+
+- Test git/github commands
+
+
+---
+
+## Why branch?
+
+**Allows simultaneous work**
+
+- Your work and your teammates’ work stay independent until you choose to combine them
+
+- You control when you deal with conflicts: when you’re ready to merge, with your own changes isolated and easy to reason about. The conflicts still happen sometimes, but they’re smaller and happen on your schedule.
+
+
+---
+
+## Why branch?
+
+**Easier to QC your work or others’ work**
+
+- Reviewing is easier because the changes are bundled
+
+- Putting work on a branch first means someone can double-check it before it goes into the main project. It catches mistakes early, and it’s how we all learn from each other’s work.
+
+---
+
+class: inverse, middle, center
+
+# Questions?
+
+---
+
+## Demo
+
+
+
+
+

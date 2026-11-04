@@ -21,6 +21,19 @@ xaringanExtra::use_share_again()
 - Why branch?
 - How to branch and know which branch you’re on by exploring different tools (Github Desktop, RStudio, Git Bash) to see what options you have
 
+```{r embed-xaringan-branch, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "slides/branching.html", ratio = "16:9")
+```
+
+<aside>
+Shortcut Keys
+
+- `f`: full-screen
+- `Esc`: exit full-screen
+- `o`: tile view
+- `r ji('left_arrow')` `r ji('right_arrow')`: advance slide
+</aside>
+
 ### Session #2 (TBD): Pull Requests & Merges
 
 - Why and how to create a pull request (PR)
