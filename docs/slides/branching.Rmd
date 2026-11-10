@@ -69,7 +69,7 @@ style_mono_accent(
 
 - Making a copy of an existing branch that you can work on and take into your own direction to ultimately fold back into the main line of development.
 
-- A branch is something where you can stage files, commit and push to Github and view it online. Can also delete.
+- A branch is something where you can stage files, commit and push to Github and view it online. Can also delete locally and/or on Github.
 ]
 
 ---
@@ -125,6 +125,16 @@ class: inverse, middle, center
 
 ---
 
+## Why branch?
+
+- A safe place to experiment
+
+- Allows simultaneous work
+
+- Easier to QC your work or others’ work
+
+---
+
 class: inverse, middle, center
 
 # Questions?
@@ -132,6 +142,20 @@ class: inverse, middle, center
 ---
 
 ## Demo
+
+.f3[
+- Github Desktop
+
+- RStudio
+
+- Git Bash
+  - Create new branch and switch to it: `git checkout -b <name of branch>`
+  - See all branches in the repo: `git branch`
+  - Switch to branch: `git checkout <name of branch>`
+  - Delete branch locally (force - when it hasn't been pushed to Github yet): `git checkout -D <name of branch>`
+  - Delete branch locally (has been pushed to Github): `git checkout -d <name of branch>`
+  ]
+  
 
 
 
