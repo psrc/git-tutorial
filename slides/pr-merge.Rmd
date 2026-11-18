@@ -1,0 +1,94 @@
+---
+title: "Pull Requests and Merges"
+date: "December 1, 2026"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
+library(xaringanExtra)
+library(emo)
+use_tile_view()
+use_panelset()
+use_tachyons()
+
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#91268F",
+  header_font_google = google_font("Poppins"),
+  text_font_google   = google_font("Poppins", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  text_font_size = "2rem"
+)
+```
+# General Workflow
+
+.tc.v-mid.mt5[
+.bw2.br-pill.shadow-5.ph4.f2[Clone/Create Repository]
+
+.bw2.br-pill.shadow-5.ph4.f2.mt5[Branch]
+
+.bg-light-yellow.b--gold.ba.bw2.br-pill.shadow-5.ph4.f2.mt5[Pull Request]
+
+.bg-light-yellow.b--gold.ba.bw2.br-pill.shadow-5.ph4.f2.mt5[Merge]
+]
+
+---
+
+# Goals
+
+1. Create a pull request (PR)
+
+2. Merge a branch and deal with merge conflicts
+
+---
+
+# Pull Requests (PR)
+
+- A proposal to merge your branch into another one. A request to someone to pull your code and look at it.
+
+- Opportunity for code review, testing, and documentation.
+
+---
+
+# Creating a PR
+
+1. On the git-together repo, create a new branch (e.g. christy-ingredients)
+
+2. Add two new commits to new branch
+
+  2. Edit `ingredients.R` file by adding a new ingredient
+
+  3. Commit
+
+  4. Repeat
+
+3. Push commits to Github
+
+4. Create PR
+
+---
+
+class: inverse, middle, center
+
+# Questions?
+
+---
+
+## Demo
+
