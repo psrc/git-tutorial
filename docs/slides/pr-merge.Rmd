@@ -1,0 +1,185 @@
+---
+title: "Pull Requests and Merges"
+date: "December 1, 2026"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+
+```{r xaringan-extra, echo=FALSE, warning=FALSE}
+library(xaringanExtra)
+library(emo)
+use_tile_view()
+use_panelset()
+use_tachyons()
+
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#91268F",
+  header_font_google = google_font("Poppins"),
+  text_font_google   = google_font("Poppins", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  text_font_size = "2rem"
+)
+```
+# General Workflow
+
+.tc.v-mid.mt5[
+.bw2.br-pill.shadow-5.ph4.f2[Clone/Create Repository]
+
+.bw2.br-pill.shadow-5.ph4.f2.mt5[Branch]
+
+.bg-light-yellow.b--gold.ba.bw2.br-pill.shadow-5.ph4.f2.mt5[Pull Request]
+
+.bg-light-yellow.b--gold.ba.bw2.br-pill.shadow-5.ph4.f2.mt5[Merge]
+]
+
+---
+
+# Goals
+
+1. Create a pull request (PR)
+
+2. Merge a branch and deal with merge conflicts
+
+---
+
+class: inverse, middle, center
+
+# Pull Requests (PR)
+
+---
+
+# What is a Pull Requests (PR)
+
+.f3[
+- A request for someone to pull your code and look at it.
+
+- Underlying purpose is to review before merging branch into another one.
+
+- Creating a PR doesn't alter the code.
+
+- Opportunity for code review, testing, and documentation.
+]
+
+---
+
+class: inverse, middle
+
+# Code Side by Side
+
+.f2[
+Prepping for the PR
+
+Create the PR
+]
+
+---
+
+# Prep for PR
+
+.f3[
+1. On the `git-together` repo, create a new branch (e.g. christy-ingredients)
+
+2. Add two new commits to new branch
+
+  2. Edit `ingredients.R` file by adding a new ingredient
+
+  3. Commit
+
+  4. Repeat
+
+3. Push branch and its commits to Github
+]
+
+---
+
+# Draft v. Standard PR
+
+.pull-left.f4[
+**Draft PR**
+
+- Can’t be merged. The merge button is disabled until you click “Ready for review.”
+
+- Doesn’t automatically request reviews from code owners (CODEOWNERS), so you won’t ping people prematurely.
+
+- Shows a gray “Draft” badge instead of the green “Open” one.
+
+- Good for early feedback, sharing in-progress work.
+]
+
+.pull-right.f4[
+**Standard PR**
+
+- Can be merged once it meets your branch protection rules (required approvals, passing checks, etc.).
+
+- Automatically requests reviews from code owners and notifies reviewers.
+
+- Signals “this is ready for a real review.”
+
+
+]
+
+---
+
+# Merge PR
+
+.f5[
+**Create a merge commit**
+
+- Keeps A, B, C exactly as they are, and adds one extra "merge commit" (M) that ties the two branches together.
+- History is non-linear: you can see where the branch split off and where it rejoined.
+- Original SHAs are preserved.
+- Result on main: A, B, C, M (with a visible fork/join in the graph)
+
+**Squash and merge**
+
+- Collapses A, B, C into one new commit (S).
+- History is linear, and the original commits don't appear in main.
+- Result on main: S
+
+**Rebase and merge**
+
+- Replays A, B, C on top of main's latest commit as new copies (A', B', C').
+- History is linear, with no merge commit, and each commit is kept separately but gets a new SHA.
+- Result on main: A', B', C'
+]
+
+---
+
+
+class: inverse, middle, center
+
+# Questions?
+
+---
+
+# Tagging commits
+
+- In Github Desktop, click on `History`
+
+- Select a commit
+
+- Right-click and select `Create Tag`
+
+- In Github, click on dropdown containing branch name and select `Tag` tab
+
+---
+
+
+
+
